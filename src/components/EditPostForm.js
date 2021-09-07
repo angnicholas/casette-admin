@@ -74,7 +74,8 @@ export const EditPostForm = ({preloadedValues}) => {
             },
           }
         ).then((res) => {
-          //console.log(res);
+          
+          console.log(res);
 
           if(res.status == 200){
             setText("");//reset values
@@ -83,11 +84,12 @@ export const EditPostForm = ({preloadedValues}) => {
             history.push("/posts"); //Redirect back to post listing
           
           } else{
+            
             alert("Failed to upload, please try again!");
           }
 
         }).catch((err) => {
-          console.log(err);
+          console.log("there is an error!", err.json());
         })      
       } catch (err) {console.log(err);}
     }

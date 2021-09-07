@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/real-blog-frontend-admin-newer/static/css/main.092269c6.chunk.css",
-    "main.js": "/real-blog-frontend-admin-newer/static/js/main.ab8a4fe4.chunk.js",
-    "main.js.map": "/real-blog-frontend-admin-newer/static/js/main.ab8a4fe4.chunk.js.map",
+    "main.js": "/real-blog-frontend-admin-newer/static/js/main.ec754238.chunk.js",
+    "main.js.map": "/real-blog-frontend-admin-newer/static/js/main.ec754238.chunk.js.map",
     "runtime-main.js": "/real-blog-frontend-admin-newer/static/js/runtime-main.ab25ad9c.js",
     "runtime-main.js.map": "/real-blog-frontend-admin-newer/static/js/runtime-main.ab25ad9c.js.map",
     "static/css/2.a2032d84.chunk.css": "/real-blog-frontend-admin-newer/static/css/2.a2032d84.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.a2032d84.chunk.css",
     "static/js/2.69a1bca4.chunk.js",
     "static/css/main.092269c6.chunk.css",
-    "static/js/main.ab8a4fe4.chunk.js"
+    "static/js/main.ec754238.chunk.js"
   ]
 }

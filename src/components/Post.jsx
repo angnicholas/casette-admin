@@ -5,8 +5,9 @@ import Button from "react-bootstrap/Button";
 import AlertDialog from "./Dialog";
 const { DateTime } = require("luxon");
 
+const PUBLIC_URL = 'https://real-blog-frontend-public-code.vercel.app/';
+
 const yes = (e) => {
-  console.log(process.env.REACT_APP_PUBLIC_URL);
   console.log(DateTime.now());
 }
 
@@ -34,7 +35,7 @@ const Post = ({ post }) => {
       
       <div className="choicebuttons">
         <Button onClick={yes} variant="link">
-          <a target="_blank" href={`${process.env.REACT_APP_PUBLIC_URL}posts/${post._id}`}>View Live</a>
+          <a target="_blank" href={`${PUBLIC_URL}posts/${post._id}`}>View Live</a>
         </Button>
         <Button variant="link">
           <Link to={`${match.url}/${post._id}`}>Edit Post</Link>

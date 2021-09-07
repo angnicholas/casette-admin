@@ -9,7 +9,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
-  <HashRouter basename="/">
+  <HashRouter basename={process.env.PUBLIC_URL}>
     <Routes />
   </HashRouter>,
   document.getElementById("root")

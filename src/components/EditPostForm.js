@@ -7,7 +7,9 @@ import QuillEditor from "../components/editor/QuillEditor";
 import AlertDialog from "./Dialog";
 import axios from "axios";
 
-const FILE_UPLOAD_LOCATION = process.env.REACT_APP_BACKEND_URL+'uploadfiles';
+const BACKEND_URL = 'https://real-blog-backend.herokuapp.com/';
+
+const FILE_UPLOAD_LOCATION = BACKEND_URL+'uploadfiles';
 
 export const EditPostForm = ({preloadedValues}) => {
 
@@ -62,7 +64,7 @@ export const EditPostForm = ({preloadedValues}) => {
 
       try {
         const req = fetch(
-          process.env.REACT_APP_BACKEND_URL+`posts/${id}`,
+          BACKEND_URL+`posts/${id}`,
           {
             method: "PUT",
             body: realFormData,

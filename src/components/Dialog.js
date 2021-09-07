@@ -6,6 +6,9 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import {useHistory, withRouter, useLocation} from 'react-router-dom';
+
+const BACKEND_URL = 'https://real-blog-backend.herokuapp.com/';
+
 //import { useHistory } from 'react-router-dom';
 
 class AlertDialog extends React.Component {
@@ -36,7 +39,7 @@ class AlertDialog extends React.Component {
     try {
       const req = fetch(
 
-        process.env.REACT_APP_BACKEND_URL + 
+        BACKEND_URL + 
         `posts/${this.props.deleteid}`,
 
         {

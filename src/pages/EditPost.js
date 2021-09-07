@@ -26,6 +26,8 @@ function EditPost() {
   }, [])
 
   return data ? <EditPostForm preloadedValues={data} /> : <div>Loading...</div>
+  //return <div>Yes</div>
+
 }
 
 export default EditPost;

@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.092269c6.chunk.css",
-    "main.js": "/static/js/main.2a036789.chunk.js",
-    "main.js.map": "/static/js/main.2a036789.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.bba7a002.js",
-    "runtime-main.js.map": "/static/js/runtime-main.bba7a002.js.map",
-    "static/css/2.a2032d84.chunk.css": "/static/css/2.a2032d84.chunk.css",
-    "static/js/2.69a1bca4.chunk.js": "/static/js/2.69a1bca4.chunk.js",
-    "static/js/2.69a1bca4.chunk.js.map": "/static/js/2.69a1bca4.chunk.js.map",
-    "static/js/3.f14af056.chunk.js": "/static/js/3.f14af056.chunk.js",
-    "static/js/3.f14af056.chunk.js.map": "/static/js/3.f14af056.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.a2032d84.chunk.css.map": "/static/css/2.a2032d84.chunk.css.map",
-    "static/css/main.092269c6.chunk.css.map": "/static/css/main.092269c6.chunk.css.map",
-    "static/js/2.69a1bca4.chunk.js.LICENSE.txt": "/static/js/2.69a1bca4.chunk.js.LICENSE.txt"
+    "main.css": "/real-blog-frontend-admin-newer/static/css/main.092269c6.chunk.css",
+    "main.js": "/real-blog-frontend-admin-newer/static/js/main.ab8a4fe4.chunk.js",
+    "main.js.map": "/real-blog-frontend-admin-newer/static/js/main.ab8a4fe4.chunk.js.map",
+    "runtime-main.js": "/real-blog-frontend-admin-newer/static/js/runtime-main.ab25ad9c.js",
+    "runtime-main.js.map": "/real-blog-frontend-admin-newer/static/js/runtime-main.ab25ad9c.js.map",
+    "static/css/2.a2032d84.chunk.css": "/real-blog-frontend-admin-newer/static/css/2.a2032d84.chunk.css",
+    "static/js/2.69a1bca4.chunk.js": "/real-blog-frontend-admin-newer/static/js/2.69a1bca4.chunk.js",
+    "static/js/2.69a1bca4.chunk.js.map": "/real-blog-frontend-admin-newer/static/js/2.69a1bca4.chunk.js.map",
+    "static/js/3.f14af056.chunk.js": "/real-blog-frontend-admin-newer/static/js/3.f14af056.chunk.js",
+    "static/js/3.f14af056.chunk.js.map": "/real-blog-frontend-admin-newer/static/js/3.f14af056.chunk.js.map",
+    "index.html": "/real-blog-frontend-admin-newer/index.html",
+    "static/css/2.a2032d84.chunk.css.map": "/real-blog-frontend-admin-newer/static/css/2.a2032d84.chunk.css.map",
+    "static/css/main.092269c6.chunk.css.map": "/real-blog-frontend-admin-newer/static/css/main.092269c6.chunk.css.map",
+    "static/js/2.69a1bca4.chunk.js.LICENSE.txt": "/real-blog-frontend-admin-newer/static/js/2.69a1bca4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bba7a002.js",
+    "static/js/runtime-main.ab25ad9c.js",
     "static/css/2.a2032d84.chunk.css",
     "static/js/2.69a1bca4.chunk.js",
     "static/css/main.092269c6.chunk.css",
-    "static/js/main.2a036789.chunk.js"
+    "static/js/main.ab8a4fe4.chunk.js"
   ]
 }

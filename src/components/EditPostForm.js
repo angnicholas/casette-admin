@@ -36,7 +36,7 @@ export const EditPostForm = ({preloadedValues}) => {
 
     console.log("submitting....");
 
-    event.preventDefault();
+    event.preventDefault(); //This prevents default behaviour of pressing submit: The page refreshing without saving!
 
     const sendDataToServer = (coverImage)=>{
 

@@ -25,9 +25,11 @@ const NewPost = () => {
   })
 
   const onSubmit = (event) => {
+
+    event.preventDefault(); //This prevents default behaviour of pressing submit: The page refreshing without saving!
     
     //Method to POST data to the server.
-    const sendDataToServer = (coverImage) => {
+    const sendDataToServer = async (coverImage) => {
       
       //const currentUsername = localStorage.getItem("currentUsername");
       const currentDisplayName = localStorage.getItem("currentDisplayName");
@@ -44,7 +46,7 @@ const NewPost = () => {
 
       try {
         
-        const req = fetch(
+        const req = await fetch(
           
           process.env.REACT_APP_BACKEND_URL+'posts/',
 
@@ -60,7 +62,7 @@ const NewPost = () => {
 
           console.log(res);
 
-          if(res.status == 200){
+          if(res.status === 200){
             setText("");//reset values
             setTitle("");
 
@@ -94,12 +96,16 @@ const NewPost = () => {
     //Try to post the cover image and get back the URL as a response.
     axios.post(FILE_UPLOAD_LOCATION, imageFormData, config)
       .then(res => {
+        console.log("something something");
+
         if(res.data.success) { //URL is stored in res.data.url
+          console.log("Image has been sent to the server. Now sending post data.")
           sendDataToServer(res.data.url);
         }else{ //file didn't upload
           sendDataToServer('uploads/default.webp');
         }
     }).catch(err => {
+      console.log(err);
       sendDataToServer('uploads/default.webp');
     });
 

@@ -7,7 +7,9 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import {useHistory, withRouter, useLocation} from 'react-router-dom';
 
-const BACKEND_URL = 'https://real-blog-backend.herokuapp.com/';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
+//const BACKEND_URL = 'https://real-blog-backend.herokuapp.com/';
 
 //import { useHistory } from 'react-router-dom';
 

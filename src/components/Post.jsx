@@ -5,7 +5,10 @@ import Button from "react-bootstrap/Button";
 import AlertDialog from "./Dialog";
 const { DateTime } = require("luxon");
 
-const PUBLIC_URL = 'https://real-blog-frontend-public-code.vercel.app/';
+//const PUBLIC_URL = 'https://real-blog-frontend-public-code.vercel.app/';
+
+
+const PUBLIC_URL = process.env.REACT_APP_PUBLIC_URL;
 
 const yes = (e) => {
   console.log(DateTime.now());

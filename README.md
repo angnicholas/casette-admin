@@ -6,5 +6,5 @@ This is the blog admin (frontend) of the Casette project, a RESTful Blog Creatio
 
 You may view the rest of the code to the other parts of the project below.
 
-View the backend code: https://github.com/angnicholas/casette-backend
+View the backend code: https://github.com/angnicholas/casette-backend  
 View the frontend (public site): https://github.com/angnicholas/casette-public/

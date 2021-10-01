@@ -1,6 +1,6 @@
 {
   "homepage":"https://angnicholas.github.io/casette-admin/",
-  "name": "blog-cms",
+  "name": "casette-admin",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -140,7 +140,7 @@ const TabularListing = ({ posts }) => {
             <td>{DateTime.fromISO(item.date_created).toLocaleString(options)}</td>
             <td>{DateTime.fromISO(item.date_modified).toLocaleString(options)}</td>
             <td>{item.published ? "No" : "Yes"}</td>
-            <td>{item.published ? <Button><a target="_blank" href={`${process.env.REACT_APP_PUBLIC_URL}posts/${item._id}`}>View Live</a></Button> : ""}</td>
+            <td>{item.published ? <Button><a target="_blank" href={`${process.env.REACT_APP_PUBLIC_URL}#/posts/${item._id}`}>View Live</a></Button> : ""}</td>
             <td><Button><a href={process.env.REACT_APP_MY_URL+`#/posts/${item._id}`}>Edit</a></Button></td>
             <td><AlertDialog deleteid={item._id}></AlertDialog></td>
           </tr>

@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/casette-admin/static/css/main.092269c6.chunk.css",
+    "main.js": "/casette-admin/static/js/main.57c07902.chunk.js",
+    "main.js.map": "/casette-admin/static/js/main.57c07902.chunk.js.map",
+    "runtime-main.js": "/casette-admin/static/js/runtime-main.312b27f3.js",
+    "runtime-main.js.map": "/casette-admin/static/js/runtime-main.312b27f3.js.map",
+    "static/css/2.a2032d84.chunk.css": "/casette-admin/static/css/2.a2032d84.chunk.css",
+    "static/js/2.1c323b3f.chunk.js": "/casette-admin/static/js/2.1c323b3f.chunk.js",
+    "static/js/2.1c323b3f.chunk.js.map": "/casette-admin/static/js/2.1c323b3f.chunk.js.map",
+    "static/js/3.424e1391.chunk.js": "/casette-admin/static/js/3.424e1391.chunk.js",
+    "static/js/3.424e1391.chunk.js.map": "/casette-admin/static/js/3.424e1391.chunk.js.map",
+    "index.html": "/casette-admin/index.html",
+    "static/css/2.a2032d84.chunk.css.map": "/casette-admin/static/css/2.a2032d84.chunk.css.map",
+    "static/css/main.092269c6.chunk.css.map": "/casette-admin/static/css/main.092269c6.chunk.css.map",
+    "static/js/2.1c323b3f.chunk.js.LICENSE.txt": "/casette-admin/static/js/2.1c323b3f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.312b27f3.js",
+    "static/css/2.a2032d84.chunk.css",
+    "static/js/2.1c323b3f.chunk.js",
+    "static/css/main.092269c6.chunk.css",
+    "static/js/main.57c07902.chunk.js"
+  ]
+}

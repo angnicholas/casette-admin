@@ -33,9 +33,7 @@ const Home = () => {
     getPosts();
 
   }, []);
-
-  console.log(posts);
-
+  
   return (
 
     posts ? <TabularListing posts={posts} /> : <div>Loading...</div>

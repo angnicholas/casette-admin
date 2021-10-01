@@ -2,15 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Button from "@material-ui/core/Button";
-import Form from "react-bootstrap/Form";
 import QuillEditor from "../components/editor/QuillEditor";
 import AlertDialog from "./Dialog";
 import axios from "axios";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-
-//const BACKEND_URL = 'https://real-blog-backend.herokuapp.com/';
-
 const FILE_UPLOAD_LOCATION = BACKEND_URL+'uploadfiles';
 
 export const EditPostForm = ({preloadedValues}) => {
@@ -22,47 +18,32 @@ export const EditPostForm = ({preloadedValues}) => {
 
   let { id } = useParams();
 
-  console.log("The preloaded values are", preloadedValues);
-
-  console.log("The data to be posted is", text, title, published)
-
-  const { register, handleSubmit } = useForm({
+  const { register } = useForm({
     defaultValues: preloadedValues
   });
 
-
   let history = useHistory();
-  
-
-  console.log("Id has been set?", id);
 
   const onSubmit = (event) => {
-
-    console.log("submitting....");
-
     event.preventDefault(); //This prevents default behaviour of pressing submit: The page refreshing without saving!
 
     const sendDataToServer = (coverImage)=>{
-
-      const currentUsername = localStorage.getItem("currentUsername");
+      const currentDisplayName = localStorage.getItem("currentDisplayName");
       const token = localStorage.getItem("token");
       const bearer = `Bearer ${token}`;
-      
       
       const realFormData = coverImage ? JSON.stringify({
         title,
         text,
-        author_name:currentUsername, //IN future patches change to userinfo.displayname
+        author_name:currentDisplayName, //IN future patches change to userinfo.displayname
         published,
         cover_image_url: coverImage
       }) : JSON.stringify({
         title,
         text,
-        author_name:currentUsername, //IN future patches change to userinfo.displayname
+        author_name:currentDisplayName, //IN future patches change to userinfo.displayname
         published
       });
-
-      //console.log(realFormData);
 
       try {
         const req = fetch(
@@ -76,8 +57,6 @@ export const EditPostForm = ({preloadedValues}) => {
             },
           }
         ).then((res) => {
-          
-          console.log(res);
 
           if(res.status == 200){
             setText("");//reset values
@@ -91,7 +70,7 @@ export const EditPostForm = ({preloadedValues}) => {
           }
 
         }).catch((err) => {
-          console.log("there is an error!", err.json());
+          console.log(err.json());
         })      
       } catch (err) {console.log(err);}
     }
@@ -120,18 +99,10 @@ export const EditPostForm = ({preloadedValues}) => {
         sendDataToServer('uploads/default.webp');
       });
 
-
     }else{
       sendDataToServer(false);
     }
-
-
-    
   };
-
-  const suckMyTits = (e) => {
-    console.log(e);
-  }
 
   const handleTitleChange = (e) => {
     console.log(e.target.value);
@@ -140,7 +111,6 @@ export const EditPostForm = ({preloadedValues}) => {
 
   const onEditorChange = (value) =>{
     setText(value);
-    //console.log(value);
   }
 
   const onFilesChange = (value) => {
@@ -150,7 +120,6 @@ export const EditPostForm = ({preloadedValues}) => {
   const onCheckboxChange = (e) => {
     console.log(e.currentTarget.checked);
     setPublished(e.currentTarget.checked);
-    //console.log(published);
   }
 
   const coverImageChange = (e) => {
@@ -175,19 +144,7 @@ export const EditPostForm = ({preloadedValues}) => {
         </div>
 
         <div>
-          {/* <label>Edit the cover image</label><br />
-          
-          <input type="radio" id="CIS1" name="coverImageSelector"></input>
-          <label for="CIS1">Use the existing cover image</label><br />
-          
-          <input type="radio" id="CIS2" name="coverImageSelector"></input>
-          <label for="CIS2">Use the default image</label><br />
-
-          <input type="radio" id="CIS3" name="coverImageSelector"></input>
-          <label for="CIS3">Choose a new file: <input type="file" onChange={coverImageChange}></input></label>
-           */}
           Choose a new cover image: <input type="file" onChange={coverImageChange}></input>
-          
         </div><br />
 
         <QuillEditor

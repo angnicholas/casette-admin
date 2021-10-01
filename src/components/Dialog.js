@@ -5,20 +5,12 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import {useHistory, withRouter, useLocation} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
-//const BACKEND_URL = 'https://real-blog-backend.herokuapp.com/';
-
-//import { useHistory } from 'react-router-dom';
-
 class AlertDialog extends React.Component {
-
-  //const history = useHistory();
-
   deleteid;  
-
   state = {
     open: false
   };
@@ -31,10 +23,7 @@ class AlertDialog extends React.Component {
     this.setState({ open: false });
   };
 
-  handleAgree = () => {
-    //console.log(this.props.deleteID);
-    console.log("I agree!");
-    
+  handleAgree = () => {    
     const token = localStorage.getItem("token");
     const bearer = `Bearer ${token}`;
 
@@ -70,7 +59,6 @@ class AlertDialog extends React.Component {
   };
 
   handleDisagree = () => {
-    console.log("I will not delete. I will not do anything. Save yourself.");
     this.handleClose();
   };
 
@@ -81,23 +69,25 @@ class AlertDialog extends React.Component {
         justifyContent: "center"
       }}>
 
-        {/* Button to trigger the opening of the dialog */}
         <Button onClick={this.handleClickOpen}>Delete</Button>
-        {/* Dialog that is displayed if the state open is true */}
+
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
+
           <DialogTitle id="alert-dialog-title">
             {"Successful Alert"}
           </DialogTitle>
+
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               Do you really want to delete this post?
             </DialogContentText>
           </DialogContent>
+
           <DialogActions>
             <Button onClick={this.handleDisagree} color="primary">
               No
@@ -106,6 +96,7 @@ class AlertDialog extends React.Component {
               Yes
             </Button>
           </DialogActions>
+
         </Dialog>
       </div>
     );

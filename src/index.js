@@ -4,8 +4,6 @@ import { HashRouter } from "react-router-dom";
 import Routes from "./Routes";
 import "./index.css";
 
-//require("dotenv").config();
-
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(

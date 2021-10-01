@@ -5,14 +5,7 @@ import Button from "react-bootstrap/Button";
 import AlertDialog from "./Dialog";
 const { DateTime } = require("luxon");
 
-//const PUBLIC_URL = 'https://real-blog-frontend-public-code.vercel.app/';
-
-
 const PUBLIC_URL = process.env.REACT_APP_PUBLIC_URL;
-
-const yes = (e) => {
-  console.log(DateTime.now());
-}
 
 const Post = ({ post }) => {
   let match = useRouteMatch();
@@ -37,7 +30,7 @@ const Post = ({ post }) => {
       <p>Edited on {DateTime.fromISO(post.date_modified).toLocaleString(DateTime.DATE_MED)}</p>
       
       <div className="choicebuttons">
-        <Button onClick={yes} variant="link">
+        <Button variant="link">
           <a target="_blank" href={`${PUBLIC_URL}posts/${post._id}`}>View Live</a>
         </Button>
         <Button variant="link">

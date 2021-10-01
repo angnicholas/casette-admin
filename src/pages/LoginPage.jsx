@@ -10,13 +10,9 @@ const LoginForm = ({ setUserAuth }) => {
   const onSubmit = async (data) => {
     const formData = JSON.stringify(data);
 
-    console.log(formData);
-
     try {
       const req = await fetch(
-        process.env.REACT_APP_BACKEND_URL+"login",
-        //"https://dovimaj-blog-api.herokuapp.com/api/login"
-        
+        process.env.REACT_APP_BACKEND_URL+"login",        
         {
           method: "POST",
           body: formData,
@@ -31,7 +27,6 @@ const LoginForm = ({ setUserAuth }) => {
         setLoginErr(true);
         return;
       }
-      console.log("json response", myJson);
 
       localStorage.setItem("currentUsername", myJson.user.username);
       localStorage.setItem("currentDisplayName", myJson.user.display_name);
